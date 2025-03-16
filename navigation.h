@@ -12,9 +12,10 @@ class navigation
         ~navigation(); 
 
         void getCurrentSession(); 
-        pxr::UsdStageRefPtr getElementName(std::string elementName); 
+        pxr::UsdStageRefPtr getElement(std::string elementName); 
 
     private: 
+        pxr::UsdStageRefPtr stage; 
         pxr::UsdStageRefPtr currentSession; 
         void* operator new(size_t size); 
         void operator delete(void * ptr); 
